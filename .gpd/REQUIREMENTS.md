@@ -97,8 +97,34 @@
 
 **Coverage:**
 - Primary requirements: 14 total
-- Mapped to phases: 14
+- Mapped to phases: 14/14
 - Unmapped: 0
+
+**Phase-to-requirement mapping:**
+
+| Phase | Requirements | Count |
+|-------|-------------|-------|
+| 1: Theory Framework and Single-Cell Validation | DERV-01, DERV-02, DERV-03, DERV-04, SIMU-01, VALD-01, VALD-02 | 7 |
+| 2: N=100 Syncytium Pilot and Gap Junction Sweep | SIMU-02, CALC-01, VALD-03 | 3 |
+| 3: Stimulus-Specific Spatial Mode Encoding | SIMU-03, SIMU-04, CALC-03, VALD-04 | 4 |
+| 4: N=1,000 Scaling Test | CALC-02 | 1 |
+
+**Contract item coverage:**
+
+| Contract Item | Phase(s) | Status |
+|--------------|----------|--------|
+| claim-main | Phase 2 (LFP oscillatory baseline), Phase 3 (stimulus-correlated LFP PSD — decisive) | Planned |
+| claim-holographic | Phase 3 (LFP spatial mode encoding + recovery — decisive) | Planned |
+| obs-eeg | Phase 3 (LFP PSD per stimulus vs. thalamic oscillation bands) | Planned |
+| obs-field | Phase 2 (first SVD maps), Phase 3 (per-stimulus maps) | Planned |
+| obs-encoding | Phase 3 (holographic recovery after cell loss) | Planned |
+| deliv-sim | Phase 1 (single cell), Phase 2 (N=100 coupled), Phase 3 (sensory + controller interfaces) | Planned |
+| deliv-eeg-fig | Phase 3 | Planned |
+| deliv-encoding-fig | Phase 3 | Planned |
+| Ref-Hales | Phase 1 (read + confirm quasi-static method) | Planned |
+| Ref-Lehar | Phase 1 (operationalize encoding definition) | Planned |
+| Ref-FlyWire | Phase 4 (scale comparison) | Planned |
+| Ref-EEG-empirical | Phase 1 (identify specific dataset), Phase 3 (quantitative comparison) | Planned |
 
 ---
 
