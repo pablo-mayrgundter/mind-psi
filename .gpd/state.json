@@ -1,0 +1,428 @@
+{
+  "project_reference": {
+    "project_md_updated": null,
+    "core_research_question": null,
+    "current_focus": null
+  },
+  "project_contract": {
+    "schema_version": 1,
+    "scope": {
+      "question": "Can a Maxwell-equation treatment of the endogenous EM field of a parametric thalamic syncytium (HH cable neurons, gap junction coupling, cortical column controllers) produce EM manifold dynamics \u2014 standing wave patterns and folding transitions \u2014 that holographically encode 3D sensory inputs and reproduce EEG-like oscillatory signatures correlated with stimulus identity?",
+      "in_scope": [
+        "Three-layer thalamo-cortical model: L1 multipole EM field from HH cable currents (Hales method), L2 gap junction topology switching, L3 phase-space meta-optimization",
+        "Cortical column controllers modulating thalamic syncytium via efferent connections",
+        "3D sensory input modeling: light field (visual) and spatial audio field (auditory)",
+        "Holographic world model encoding via standing wave interference patterns (Lehar harmonic resonance)",
+        "EEG-like oscillatory signature extraction from simulated population-level EM field dynamics",
+        "Parametric scalability: system size N tunable for computational feasibility",
+        "Efficient compute kernels for neural EM field physics",
+        "Bulk-boundary correspondence encoding as L2 phenomenon",
+        "Distributed error-correcting holographic redundancy as L3 phenomenon"
+      ],
+      "out_of_scope": [
+        "Full motor control loop closure (FlyWire-style) \u2014 future work",
+        "Manifold dimensionality analysis \u2014 future work",
+        "2D sensory simplification as the primary sensory model",
+        "Consciousness claims"
+      ],
+      "unresolved_questions": [
+        "How to bridge from Hales small-population EM field treatment to syncytium-scale collective field dynamics \u2014 new physics required",
+        "Precise gap junction switching timescales and coupling strengths in the thalamus",
+        "Which EEG signatures are most diagnostic: spindles, alpha, gamma, or cross-frequency coupling",
+        "Optimal neuron model complexity: full HH cable vs simplified compartmental for practical scalability",
+        "Decisive EEG benchmark dataset not yet selected"
+      ]
+    },
+    "context_intake": {
+      "must_read_refs": [
+        "Ref-Hales",
+        "Ref-Lehar",
+        "Ref-FlyWire"
+      ],
+      "must_include_prior_outputs": [],
+      "user_asserted_anchors": [
+        "Hales endogenous EM field paper \u2014 primary method anchor for computing EM field from neural cable currents",
+        "Lehar harmonic resonance theory \u2014 primary theory anchor for holographic standing wave encoding",
+        "FlyWire/Shiu 2024 connectome simulation \u2014 scale and feasibility benchmark"
+      ],
+      "known_good_baselines": [
+        "EEG empirical data: thalamic spindle frequencies 7-14 Hz, cortical alpha 8-12 Hz, gamma 30-80 Hz"
+      ],
+      "context_gaps": [
+        "Decisive EEG benchmark dataset not yet selected \u2014 identify specific experimental paper for quantitative comparison in Phase 1",
+        "Precise gap junction coupling model for thalamic cells not specified"
+      ],
+      "crucial_inputs": [
+        "3D sensory fields must be modeled as genuine spatial fields \u2014 not 2D simplifications",
+        "Virtual point sources acceptable as test stimuli inside the 3D field, but must not reduce the sensory field model itself to 2D",
+        "System must be parametrically scalable in N for feasibility testing"
+      ]
+    },
+    "approach_policy": {
+      "formulations": [
+        "Maxwell equation treatment of endogenous EM field from HH cable current distributions (Hales method)",
+        "Syncytium modeled as electrically coupled network via gap junctions",
+        "Cortical columns as active boundary-condition controllers of the thalamic EM cavity"
+      ],
+      "allowed_estimator_families": [
+        "Full HH cable model with dendritic and axonal morphology",
+        "Simplified compartmental models as approximations with explicit validity bounds"
+      ],
+      "forbidden_estimator_families": [
+        "Point-neuron models that discard cable geometry",
+        "2D sensory field models as primary sensory representation"
+      ],
+      "allowed_fit_families": [
+        "EEG-motivated frequency analysis of simulated field dynamics",
+        "Standing wave mode decomposition of the thalamic EM field"
+      ],
+      "forbidden_fit_families": [
+        "Post-hoc tuning to match EEG signatures without mechanistic basis"
+      ],
+      "stop_and_rethink_conditions": [
+        "Simulated field dynamics show no oscillatory structure at any stimulus \u2014 rethink cell density or coupling assumptions",
+        "EEG-like signatures appear but show no correlation with stimulus identity \u2014 holographic encoding hypothesis requires revision",
+        "Computational cost makes even N~100 cells intractable \u2014 revisit EM field computation strategy before proceeding"
+      ]
+    },
+    "observables": [
+      {
+        "id": "obs-eeg",
+        "name": "EEG-like oscillatory signatures",
+        "kind": "curve",
+        "definition": "Power spectral density of the simulated thalamic EM field, showing peaks at biologically observed frequencies correlated with stimulus identity",
+        "regime": null,
+        "units": null
+      },
+      {
+        "id": "obs-field",
+        "name": "Standing wave EM field pattern",
+        "kind": "map",
+        "definition": "Spatial distribution of the EM field magnitude and phase across the thalamic syncytium, showing standing wave interference structure consistent with Lehar harmonic resonance encoding",
+        "regime": null,
+        "units": null
+      },
+      {
+        "id": "obs-encoding",
+        "name": "Holographic sensory encoding",
+        "kind": "other",
+        "definition": "Demonstration that the standing wave pattern encodes distinguishable 3D sensory inputs and can be partially recovered after simulated cell loss",
+        "regime": null,
+        "units": null
+      }
+    ],
+    "claims": [
+      {
+        "id": "claim-main",
+        "statement": "A parametric thalamic syncytium modeled with Maxwell-equation EM field computation from HH cable currents produces EEG-like oscillatory signatures that are correlated with and distinguishable by 3D sensory input identity",
+        "observables": [
+          "obs-eeg"
+        ],
+        "deliverables": [
+          "deliv-sim",
+          "deliv-eeg-fig"
+        ],
+        "acceptance_tests": [
+          "test-eeg"
+        ],
+        "references": [
+          "Ref-Hales",
+          "Ref-EEG-empirical"
+        ]
+      },
+      {
+        "id": "claim-holographic",
+        "statement": "The collective EM field of the syncytium forms standing wave patterns in the Lehar harmonic resonance sense that holographically encode distinguishable 3D sensory inputs with error-correcting redundancy",
+        "observables": [
+          "obs-field",
+          "obs-encoding"
+        ],
+        "deliverables": [
+          "deliv-encoding-fig"
+        ],
+        "acceptance_tests": [
+          "test-encoding"
+        ],
+        "references": [
+          "Ref-Lehar"
+        ]
+      }
+    ],
+    "deliverables": [
+      {
+        "id": "deliv-sim",
+        "kind": "code",
+        "path": "src/",
+        "description": "Parametric simulation of thalamic syncytium: N HH cable neurons with gap junction coupling, cortical column controller interface, EM field computation via Maxwell equations",
+        "must_contain": [
+          "parametric N",
+          "gap junction topology",
+          "EM field output",
+          "3D sensory input interface"
+        ]
+      },
+      {
+        "id": "deliv-eeg-fig",
+        "kind": "figure",
+        "path": "results/eeg-signatures.pdf",
+        "description": "Power spectral density curves of simulated thalamic EM field for different 3D sensory stimuli, overlaid with empirical EEG reference frequencies",
+        "must_contain": [
+          "per-stimulus PSD",
+          "EEG reference bands",
+          "stimulus-correlated differences"
+        ]
+      },
+      {
+        "id": "deliv-encoding-fig",
+        "kind": "figure",
+        "path": "results/standing-wave-encoding.pdf",
+        "description": "Spatial maps of the thalamic EM field showing standing wave patterns for different stimuli, plus recovery after partial cell loss",
+        "must_contain": [
+          "standing wave spatial maps",
+          "stimulus comparison",
+          "partial recovery demonstration"
+        ]
+      }
+    ],
+    "acceptance_tests": [
+      {
+        "id": "test-eeg",
+        "subject": "claim-main",
+        "kind": "benchmark",
+        "procedure": "Compute PSD of simulated thalamic EM field under at least 2 distinct 3D sensory stimuli; compare peak frequencies to known EEG bands; verify PSD profiles differ between stimuli",
+        "pass_condition": "Simulated PSD shows peaks within known EEG frequency bands AND profiles are statistically distinguishable across stimuli",
+        "evidence_required": [
+          "deliv-eeg-fig",
+          "Ref-EEG-empirical"
+        ],
+        "automation": "hybrid"
+      },
+      {
+        "id": "test-encoding",
+        "subject": "claim-holographic",
+        "kind": "other",
+        "procedure": "Encode a test 3D sensory input as a standing wave pattern; remove 20% of syncytium cells; attempt recovery of the encoded pattern from the remaining field",
+        "pass_condition": "Encoded pattern recoverable with greater than 70% fidelity after 20% cell loss, demonstrating holographic redundancy",
+        "evidence_required": [
+          "deliv-encoding-fig",
+          "Ref-Lehar"
+        ],
+        "automation": "hybrid"
+      }
+    ],
+    "references": [
+      {
+        "id": "Ref-Hales",
+        "kind": "paper",
+        "locator": "Hales, C. \u2014 The origins of the brain's endogenous electromagnetic field and its relationship to provision of consciousness \u2014 ResearchGate 2014",
+        "aliases": [
+          "Hales 2014",
+          "Hales EM field"
+        ],
+        "role": "method",
+        "why_it_matters": "Primary methodological anchor for computing the endogenous EM field from neural cable current distributions using Maxwell's equations \u2014 foundation of L1",
+        "applies_to": [
+          "claim-main"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "use",
+          "cite"
+        ]
+      },
+      {
+        "id": "Ref-Lehar",
+        "kind": "paper",
+        "locator": "Lehar, S. \u2014 Harmonic Resonance Theory / The World in Your Head \u2014 various publications",
+        "aliases": [
+          "Lehar harmonic resonance"
+        ],
+        "role": "definition",
+        "why_it_matters": "Primary theory anchor for holographic standing wave encoding in neural EM fields \u2014 defines what folding the manifold means and what the encoded world model structure should look like",
+        "applies_to": [
+          "claim-holographic"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification",
+          "writing"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "use",
+          "cite"
+        ]
+      },
+      {
+        "id": "Ref-FlyWire",
+        "kind": "paper",
+        "locator": "Shiu, P. et al. \u2014 Nature 2024 \u2014 FlyWire connectome neural simulation with MuJoCo body control",
+        "aliases": [
+          "FlyWire 2024",
+          "Shiu 2024"
+        ],
+        "role": "benchmark",
+        "why_it_matters": "Scale and computational feasibility anchor \u2014 demonstrates what is achievable with full connectome-scale neural simulation; target architecture to grow toward",
+        "applies_to": [
+          "deliv-sim"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "read",
+          "compare"
+        ]
+      },
+      {
+        "id": "Ref-EEG-empirical",
+        "kind": "dataset",
+        "locator": "EEG empirical literature \u2014 thalamic spindles 7-14 Hz, cortical alpha 8-12 Hz, gamma 30-80 Hz \u2014 benchmark dataset TBD",
+        "aliases": [
+          "EEG benchmark",
+          "thalamic EEG"
+        ],
+        "role": "benchmark",
+        "why_it_matters": "Smoking-gun validation target \u2014 simulated field dynamics must reproduce EEG-like frequency signatures to confirm the EM manifold hypothesis",
+        "applies_to": [
+          "claim-main"
+        ],
+        "carry_forward_to": [
+          "planning",
+          "execution",
+          "verification"
+        ],
+        "must_surface": true,
+        "required_actions": [
+          "compare",
+          "cite"
+        ]
+      }
+    ],
+    "forbidden_proxies": [
+      {
+        "id": "fp-oscillation",
+        "subject": "claim-main",
+        "proxy": "Neural oscillations present in the simulation but not correlated with stimulus identity",
+        "reason": "Shows the model can oscillate but not that it encodes stimulus information"
+      },
+      {
+        "id": "fp-2d",
+        "subject": "claim-holographic",
+        "proxy": "2D sensory field simplification used as the primary sensory model",
+        "reason": "The hypothesis requires 3D sensory fields; 2D shortcuts invalidate the light-field and spatial-audio encoding claims"
+      },
+      {
+        "id": "fp-qualitative",
+        "subject": "claim-main",
+        "proxy": "Qualitative similarity to EEG without quantitative frequency band matching",
+        "reason": "Would look like progress while skipping the decisive benchmark comparison"
+      }
+    ],
+    "links": [
+      {
+        "id": "link-hales-sim",
+        "source": "claim-main",
+        "target": "deliv-sim",
+        "relation": "computes",
+        "verified_by": [
+          "test-eeg"
+        ]
+      },
+      {
+        "id": "link-lehar-encoding",
+        "source": "claim-holographic",
+        "target": "deliv-encoding-fig",
+        "relation": "visualizes",
+        "verified_by": [
+          "test-encoding"
+        ]
+      }
+    ],
+    "uncertainty_markers": {
+      "weakest_anchors": [
+        "Gap between Hales single-neuron EM field treatment and syncytium-scale collective field dynamics \u2014 new physics required here",
+        "Decisive EEG benchmark dataset not yet selected \u2014 benchmark reference TBD before execution"
+      ],
+      "unvalidated_assumptions": [
+        "The thalamic syncytium is large enough and sufficiently coupled to support standing wave modes at EEG frequencies",
+        "Maxwell-equation treatment of HH cable currents gives a good approximation of the macroscopic EM field at syncytium scale",
+        "Gap junction switching timescales are compatible with holographic encoding timescales"
+      ],
+      "competing_explanations": [
+        "EEG-like signatures could emerge from synaptic current dynamics alone without requiring the full EM field treatment \u2014 would undermine L1 necessity",
+        "Holographic encoding in the brain may be implemented at the synaptic weight level rather than the physical EM field level"
+      ],
+      "disconfirming_observations": [
+        "Simulated EM field dynamics show no oscillatory structure at any stimulus",
+        "EEG-like signatures appear but are identical across all stimuli",
+        "Computational cost makes even N~100 cells intractable with Maxwell+HH approach"
+      ]
+    }
+  },
+  "position": {
+    "current_phase": null,
+    "current_phase_name": null,
+    "total_phases": null,
+    "current_plan": null,
+    "total_plans_in_phase": null,
+    "status": null,
+    "last_activity": null,
+    "last_activity_desc": null,
+    "progress_percent": 0,
+    "paused_at": null
+  },
+  "active_calculations": [],
+  "intermediate_results": [],
+  "open_questions": [
+    "How to bridge from Hales small-population EM field treatment to syncytium-scale collective field dynamics \u2014 new physics required",
+    "Precise gap junction switching timescales and coupling strengths in the thalamus",
+    "Which EEG signatures are most diagnostic: spindles, alpha, gamma, or cross-frequency coupling",
+    "Optimal neuron model complexity: full HH cable vs simplified compartmental for practical scalability",
+    "Decisive EEG benchmark dataset not yet selected"
+  ],
+  "performance_metrics": {
+    "rows": []
+  },
+  "decisions": [],
+  "approximations": [],
+  "convention_lock": {
+    "metric_signature": null,
+    "fourier_convention": null,
+    "natural_units": null,
+    "gauge_choice": null,
+    "regularization_scheme": null,
+    "renormalization_scheme": null,
+    "coordinate_system": null,
+    "spin_basis": null,
+    "state_normalization": null,
+    "coupling_convention": null,
+    "index_positioning": null,
+    "time_ordering": null,
+    "commutation_convention": null,
+    "levi_civita_sign": null,
+    "generator_normalization": null,
+    "covariant_derivative_sign": null,
+    "gamma_matrix_convention": null,
+    "creation_annihilation_order": null,
+    "custom_conventions": {}
+  },
+  "propagated_uncertainties": [],
+  "pending_todos": [],
+  "blockers": [],
+  "session": {
+    "last_date": null,
+    "stopped_at": null,
+    "resume_file": null
+  }
+}
