@@ -2,32 +2,26 @@
 
 ## Project Reference
 
-See: `.gpd/PROJECT.md` (updated 2026-03-16)
+See: .gpd/PROJECT.md
 
-**Machine-readable scoping contract:** `.gpd/state.json` field `project_contract`
-
-**Core research question:** Can a Maxwell-equation treatment of the endogenous EM field of a parametric thalamic syncytium (HH cable neurons, gap junction coupling, cortical column controllers) produce EM manifold dynamics — standing wave patterns and folding transitions — that holographically encode 3D sensory inputs and reproduce EEG-like oscillatory signatures correlated with stimulus identity?
-
-**Note on "EEG-like":** The correct target observable is LFP (local field potential, 100–1000 µm from syncytium, amplitude in V/m or µV/mm). N~100–1,000 thalamic cells cannot produce scalp EEG amplitudes. EEG frequency band labels (spindle 7–14 Hz, alpha 8–13 Hz, gamma 30–100 Hz) remain valid as oscillation frequency targets.
-
-**Current focus:** Phase 1 — Theory Framework and Single-Cell Validation
+**Core research question:** [Not set]
+**Current focus:** [Not set]
 
 ## Current Position
 
-**Current Phase:** 01
-**Current Phase Name:** Theory Framework and Single-Cell Validation
-**Total Phases:** 4
+**Current Phase:** —
+**Current Phase Name:** —
+**Total Phases:** —
 **Current Plan:** —
-**Total Plans in Phase:** TBD
-**Status:** Ready to plan
-**Last Activity:** 2026-03-16
-**Last Activity Description:** Roadmap created; research literature survey complete; requirements defined; ready for Phase 1 planning
+**Total Plans in Phase:** —
+**Status:** —
+**Last Activity:** —
 
 **Progress:** [░░░░░░░░░░] 0%
 
 ## Active Calculations
 
-None yet — Phase 1 planning not started.
+None yet.
 
 ## Intermediate Results
 
@@ -35,83 +29,58 @@ None yet.
 
 ## Open Questions
 
-**HIGH priority (block Phase 1 execution):**
-
-- Is the syncytium substrate TRN (GABAergic, well-coupled via Cx36) or excitatory relay cells (weakly/absent gap junctions)? Answer determines all cell-type parameters. [Blocks DERV-03, SIMU-01]
-- Does Hales (2014) add anything to the standard quasi-static LFP computation, or is it effectively equivalent? [Blocks DERV-01, Phase 1 EM method confirmation]
-- What specific thalamic LFP dataset will serve as the empirical validation comparator for stimulus-specific oscillations in Phase 3? [Must identify in Phase 1]
-- Is Brian2CUDA multi-compartment HH cable numerically stable? If not, which fallback (GeNN or custom JAX)? [Blocks SIMU-01]
-
-**MEDIUM priority (must address before Phase 3):**
-
-- What is the ephaptic feedback amplitude from N=100 syncytium field — above or below 1% of spike threshold (~20 mV)? [Determines whether CEMI bidirectional scope is in-scope or deferred]
-- Does TRN have morphologically aligned cells that support coherent (non-canceling) LFP at N=100? [Affects minimum N for observable field]
-- What is the Kuramoto-predicted g_j^c for synchrony onset in realistic HH TRN network with measured heterogeneity? [Guides Phase 2 g_j sweep range]
+- How to bridge from Hales small-population EM field treatment to syncytium-scale collective field dynamics — new physics required
+- Precise gap junction switching timescales and coupling strengths in the thalamus
+- Which EEG signatures are most diagnostic: spindles, alpha, gamma, or cross-frequency coupling
+- Optimal neuron model complexity: full HH cable vs simplified compartmental for practical scalability
+- Decisive EEG benchmark dataset not yet selected
 
 ## Performance Metrics
 
 | Label | Duration | Tasks | Files |
 | ----- | -------- | ----- | ----- |
-| - | - | - | - |
+| -     | -        | -     | -     |
 
 ## Accumulated Context
 
 ### Decisions
 
-Full log: `.gpd/DECISIONS.md`
-
-**Pre-Phase 1 decisions locked by literature survey:**
-
-- [Pre-Phase 1] Observable locked as LFP, not scalp EEG — N~100–1,000 cells cannot produce scalp EEG amplitudes (4–6 orders of magnitude gap); all amplitude comparisons must use LFP literature (e.g., Linden et al. 2010)
-- [Pre-Phase 1] "Standing waves" redefined as LFP spatial eigenmodes of network dynamics — NOT electromagnetic radiation modes; quasi-static Maxwell (Poisson) is the operative approximation; "standing wave" means dominant left singular vector of E-field snapshot matrix
-- [Pre-Phase 1] Holographic encoding operational definition deferred to Phase 1 execution — must specify F(x,t), reconstruction operator, and fidelity metric before Phase 2 begins
-- [Pre-Phase 1] g_j sweep (0.1–10 nS, >= 10 points) is mandatory in Phase 2 — no result reported at a single g_j value
-- [Pre-Phase 1] Uncoupled (g_j=0) control required in Phase 2 for every stimulus condition — decisive test is spatial mode structure, not frequency content alone
+None yet.
 
 ### Active Approximations
 
-| Approximation | Validity Range | Controlling Parameter | Current Value | Status |
-| --- | --- | --- | --- | --- |
-| Quasi-static Maxwell (Poisson) | f < 10 kHz, any neural scale | Retardation ratio L/lambda_EM | L/lambda ~10^-9 at f=1 kHz, L=10 mm | Valid — to confirm in Phase 1 |
-| Homogeneous isotropic tissue | Syncytium-only; no skull/CSF | Tissue boundary distance | N/A for LFP within syncytium | Approximate; +/-factor 2-3 uncertainty |
-| Dense Green's function tensor | N <= 3,000 | N x VRAM (float32 ~4 GB at N=1,000) | N = 100 (Phase 2), N = 1,000 (Phase 4) | Valid for target N; FMM needed above N~3,000 |
-| Ohmic gap junction (linear g_j) | g_j < 1 nS, coupling coeff < 0.1 | Transjunctional voltage | 0.1–10 nS sweep | Approximate at high g_j; nonlinearity risk noted |
-| HH cable with I_T, I_h (not LIF) | Single cell to N~1,000 HPC | N, dt | dt <= 0.025 ms required | Valid; cost ~4,000x LIF per simulated second |
+None yet.
 
-**Convention Lock (from SUMMARY.md unified notation):**
+**Convention Lock:**
 
-- Metric signature: N/A — quasi-static (Poisson), not wave equation
-- Fourier convention: physics e^{-i*omega*t} forward transform
-- Natural units: not set (SI for EM: V/m, T, A/m²; neural: mV, ms, nS, µm)
-- Gauge choice: N/A (quasi-static)
-- Regularization: N/A
-- Renormalization: N/A
-- Coordinate system: not set (3D Cartesian for syncytium geometry)
-- Coupling convention: Ohmic gap junction I_gap = g_j*(V_i - V_j); g_j in nS
-- HH convention: outward-positive; h = fraction NOT inactivated; I_Na = g_Na*m^3*h*(V_m - E_Na)
-- Observable convention: LFP phi = (1/4*pi*sigma) * integral J*grad'(1/|r-r'|) dV'; sigma = 0.33 S/m gray matter
-- Timestep constraint: dt <= 0.025 ms (never > 0.05 ms)
+- Fourier convention: Physics asymmetric: f_tilde(omega) = integral f(t) exp(-i*omega*t) dt; inverse: f(t) = integral [d_omega/(2*pi)] f_tilde(omega) exp(+i*omega*t); consistent with scipy.signal and MNE-Python
+- Coupling convention: Gap junction: I_gap_i = g_j*(V_i-V_j); outward-positive from cell i; g_j in nS range 0.1-10; K = g_j/(g_j+g_m) dimensionless
+
+*Custom conventions:*
+- Observable: LFP (local field potential), NOT scalp EEG; amplitude in V/m or uV; compare to LFP literature (Linden et al. 2010)
+- Unit System: SI for EM (V/m, A, S/m); neural units (mV, ms, nS, uF/cm2, uA/cm2, um); NO CGS; conversion: 1 uV/cm = 0.1 mV/m
+- Hh Current Sign: outward_positive; I_ion = g*(V_m-E_ion); h = fraction NOT inactivated; h_inf(-65mV)=0.596; C_m dV/dt = -I_Na-I_K-I_L-I_T-I_h-I_NaP+I_ext
+- Membrane Potential Sign: V_m = V_intracellular - V_extracellular; resting = -65 mV; AP peak = +40 mV; AHP = -75 mV
+- Em Approximation: quasi-static Poisson: ∇·(σ∇φ) = -∇·J_imp; σ=0.33 S/m; retardation ratio L/lambda ~ 3e-8 at 1kHz and 1cm; full Maxwell adds nothing at neural scales
+- Standing Wave Definition: LFP spatial eigenmode of network dynamics (NOT EM radiation mode); dominant left singular vector U[:,0] of LFP snapshot matrix; spatial period set by network architecture not EM wavelength
+- Holographic Fidelity: rho = Pearson(F_original, F_reconstructed) >= 0.70 after 20% cell loss; F = U[:,0] dominant SVD mode; compare to matched-N random distributed code baseline
+- Kuramoto Order Parameter: R = (1/N)*|sum_k exp(i*theta_k)|; subcritical R<0.2; supercritical R>0.8; g_j^c = coupling threshold at max dR/dg_j
+- Simulation Timestep: dt <= 0.025 ms; never exceed 0.05 ms; Crank-Nicolson for cable; backward/exponential Euler for HH gates; initialize gates to steady-state at V=-65mV; 100ms settling before recording
 
 ### Propagated Uncertainties
 
-| Quantity | Current Value | Uncertainty | Last Updated | Method |
-| --- | --- | --- | --- | --- |
-| TRN g_j per junction | 0.1–2 nS (Landisman 2002) | Range spans 20x; upper bound TBD | Pre-Phase 1 | Literature |
-| LFP field amplitude at N=100 | TBD | Unknown until Phase 2 | — | — |
-| Synchrony threshold g_j^c | TBD | Unknown; Kuramoto analogy gives order-of-magnitude | — | — |
+None yet.
 
 ### Pending Todos
 
 None yet.
 
-### Blockers / Concerns
+### Blockers/Concerns
 
-- [Pre-Phase 1] TRN vs. relay cell design decision is unresolved — materially affects all cell-type parameters and Phase 1 HH model construction
-- [Pre-Phase 1] Specific thalamic LFP empirical benchmark dataset not yet identified — must be resolved in Phase 1 before Phase 3 can be designed
-- [Pre-Phase 1] Brian2CUDA multi-compartment stability unvalidated — potential Phase 1 blocker; GeNN is named fallback
+None
 
 ## Session Continuity
 
-**Last session:** 2026-03-16
-**Stopped at:** Roadmap created; Phase 1 ready to plan
+**Last session:** —
+**Stopped at:** —
 **Resume file:** —
