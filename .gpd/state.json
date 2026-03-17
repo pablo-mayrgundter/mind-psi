@@ -398,7 +398,7 @@
   "approximations": [],
   "convention_lock": {
     "metric_signature": null,
-    "fourier_convention": null,
+    "fourier_convention": "Physics asymmetric: f_tilde(omega) = integral f(t) exp(-i*omega*t) dt; inverse: f(t) = integral [d_omega/(2*pi)] f_tilde(omega) exp(+i*omega*t); consistent with scipy.signal and MNE-Python",
     "natural_units": null,
     "gauge_choice": null,
     "regularization_scheme": null,
@@ -406,7 +406,7 @@
     "coordinate_system": null,
     "spin_basis": null,
     "state_normalization": null,
-    "coupling_convention": null,
+    "coupling_convention": "Gap junction: I_gap_i = g_j*(V_i-V_j); outward-positive from cell i; g_j in nS range 0.1-10; K = g_j/(g_j+g_m) dimensionless",
     "index_positioning": null,
     "time_ordering": null,
     "commutation_convention": null,
@@ -415,7 +415,17 @@
     "covariant_derivative_sign": null,
     "gamma_matrix_convention": null,
     "creation_annihilation_order": null,
-    "custom_conventions": {}
+    "custom_conventions": {
+      "observable": "LFP (local field potential), NOT scalp EEG; amplitude in V/m or uV; compare to LFP literature (Linden et al. 2010)",
+      "unit_system": "SI for EM (V/m, A, S/m); neural units (mV, ms, nS, uF/cm2, uA/cm2, um); NO CGS; conversion: 1 uV/cm = 0.1 mV/m",
+      "HH_current_sign": "outward_positive; I_ion = g*(V_m-E_ion); h = fraction NOT inactivated; h_inf(-65mV)=0.596; C_m dV/dt = -I_Na-I_K-I_L-I_T-I_h-I_NaP+I_ext",
+      "membrane_potential_sign": "V_m = V_intracellular - V_extracellular; resting = -65 mV; AP peak = +40 mV; AHP = -75 mV",
+      "EM_approximation": "quasi-static Poisson: \u2207\u00b7(\u03c3\u2207\u03c6) = -\u2207\u00b7J_imp; \u03c3=0.33 S/m; retardation ratio L/lambda ~ 3e-8 at 1kHz and 1cm; full Maxwell adds nothing at neural scales",
+      "standing_wave_definition": "LFP spatial eigenmode of network dynamics (NOT EM radiation mode); dominant left singular vector U[:,0] of LFP snapshot matrix; spatial period set by network architecture not EM wavelength",
+      "holographic_fidelity": "rho = Pearson(F_original, F_reconstructed) >= 0.70 after 20% cell loss; F = U[:,0] dominant SVD mode; compare to matched-N random distributed code baseline",
+      "Kuramoto_order_parameter": "R = (1/N)*|sum_k exp(i*theta_k)|; subcritical R<0.2; supercritical R>0.8; g_j^c = coupling threshold at max dR/dg_j",
+      "simulation_timestep": "dt <= 0.025 ms; never exceed 0.05 ms; Crank-Nicolson for cable; backward/exponential Euler for HH gates; initialize gates to steady-state at V=-65mV; 100ms settling before recording"
+    }
   },
   "propagated_uncertainties": [],
   "pending_todos": [],
