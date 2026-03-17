@@ -74,13 +74,13 @@ This project derives and simulates a three-layer thalamo-cortical electromagneti
 - If Hales (2014) primary source indicates a computational approach incompatible with standard quasi-static LFP: re-examine EM method choice before Phase 2
 - If TRN gap junction parameters are found incompatible with target oscillation regime: reopen cell type decision
 
-**Plans:** TBD (estimated 3–4 plans)
+**Plans:** 3 plans
 
 Plans:
 
-- [ ] 01-01: Read primary sources (Hales 2014, Lehar 2003, Landisman 2002, McCormick & Huguenard 1992); resolve TRN vs. relay cell decision; write theory framework document with quasi-static justification, LFP observable lock, encoding operational definition
-- [ ] 01-02: Implement and validate single HH cable cell (I_T, I_h, I_NaP, >= 10 compartments) in Brian2; cross-validate vs. NEURON
-- [ ] 01-03: Implement and validate LFP Green's function kernel (JAX-GPU dense tensor); point-source analytical test; confirm Brian2CUDA stability or select fallback
+- [ ] 01-01-PLAN.md -- Write THEORY-FRAMEWORK.md: read Hales 2014, lock LFP observable, confirm quasi-static, define holographic encoding SVD operator, decide TRN substrate, identify Contreras 1997 benchmark
+- [ ] 01-02-PLAN.md -- Implement and validate Brian2 HH cable cell (I_T, I_h, I_NaP, >= 10 compartments); convergence study; LTS threshold; spindle oscillation; cross-validate vs. NEURON ModelDB 279
+- [ ] 01-03-PLAN.md -- Implement JAX-GPU LFP Green's function kernel; point-source accuracy test; LFPy cross-check; Brian2CUDA GPU stability test; compile Phase 1 go/no-go table
 
 ---
 
