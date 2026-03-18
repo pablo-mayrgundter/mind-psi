@@ -53,8 +53,24 @@ None yet.
 
 **Convention Lock:**
 
+- Metric signature: N/A — biophysics project (computational neuroscience, not QFT)
 - Fourier convention: Physics asymmetric: f_tilde(omega) = integral f(t) exp(-i*omega*t) dt; inverse: f(t) = integral [d_omega/(2*pi)] f_tilde(omega) exp(+i*omega*t); consistent with scipy.signal and MNE-Python
+- Natural units: N/A — biophysics project (computational neuroscience, not QFT)
+- Gauge choice: N/A — biophysics project (computational neuroscience, not QFT)
+- Regularization scheme: N/A — biophysics project (computational neuroscience, not QFT)
+- Renormalization scheme: N/A — biophysics project (computational neuroscience, not QFT)
+- Coordinate system: N/A — biophysics project (computational neuroscience, not QFT)
+- Spin basis: N/A — biophysics project (computational neuroscience, not QFT)
+- State normalization: N/A — biophysics project (computational neuroscience, not QFT)
 - Coupling convention: Gap junction: I_gap_i = g_j*(V_i-V_j); outward-positive from cell i; g_j in nS range 0.1-10; K = g_j/(g_j+g_m) dimensionless
+- Index positioning: N/A — biophysics project (computational neuroscience, not QFT)
+- Time ordering: N/A — biophysics project (computational neuroscience, not QFT)
+- Commutation convention: N/A — biophysics project (computational neuroscience, not QFT)
+- Levi-Civita sign: N/A — biophysics project (computational neuroscience, not QFT)
+- Generator normalization: N/A — biophysics project (computational neuroscience, not QFT)
+- Covariant derivative sign: N/A — biophysics project (computational neuroscience, not QFT)
+- Gamma matrix convention: N/A — biophysics project (computational neuroscience, not QFT)
+- Creation/annihilation order: N/A — biophysics project (computational neuroscience, not QFT)
 
 *Custom conventions:*
 - Observable: LFP (local field potential), NOT scalp EEG; amplitude in V/m or uV; compare to LFP literature (Linden et al. 2010)
