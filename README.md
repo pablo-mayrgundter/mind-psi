@@ -1,6 +1,6 @@
 # mind-psi
 
-_Developing a physical [theory of thalamo-cortical function](https://sites.google.com/site/pablomayrgundter/mind) with [PSI's Get Physics Done AI assistant](https://github.com/psi-oss/get-physics-done)._
+_Developing a physical [theory of thalamo-cortical function](https://sites.google.com/site/pablomayrgundter/mind) with [psi.inc's Get Physics Done AI assistant](https://github.com/psi-oss/get-physics-done)._
 
 **Core question:** Can a Maxwell-equation treatment of the endogenous Electromagnetic (EM) field of a parametric thalamic syncytium (Hodgkin-Huxley (HH) cable neurons, Connexin 36 (Cx36) gap junction coupling, cortical column controllers) produce EM manifold dynamics that holographically encode 3D sensory inputs and reproduce biologically observed Local Field Potential (LFP) oscillatory signatures correlated with stimulus identity?
 
