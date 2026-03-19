@@ -1,16 +1,10 @@
-# Mind-Psi: Modeling the physics of Thalamo-Cortical anatomy
+# mind-psi
 
-_*Testing a theory of thalamo-cortical anatomy inspired by McFadden's CEMI fields and Lehar's harmonic resonance theories*_
+_Develping a physical model of [theory of thalamo-cortical function](https://sites.google.com/site/pablomayrgundter/mind) with [PBC's PSI AI assistant](https://github.com/psi-oss/get-physics-done)._
 
 **Core question:** Can a Maxwell-equation treatment of the endogenous Electromagnetic (EM) field of a parametric thalamic syncytium (Hodgkin-Huxley (HH) cable neurons, Connexin 36 (Cx36) gap junction coupling, cortical column controllers) produce EM manifold dynamics that holographically encode 3D sensory inputs and reproduce biologically observed Local Field Potential (LFP) oscillatory signatures correlated with stimulus identity?
 
 The hypothesis: the thalamus operates as a folding electromagnetic manifold. Cortical columns drive it as computational controllers. The collective LFP of N gap-junction-coupled thalamic reticular nucleus (TRN) cells produces spatial standing-wave modes (Steven Lehar's harmonic resonance) that encode a holographic model of the sensed world — recoverable with high (eg ≥70%) fidelity after moderate (eg 20%) cell loss.
-
----
-
-_This project uses https://github.com/psi-oss/get-physics-done to develop the ideas at  https://sites.google.com/site/pablomayrgundter/mind._
-
----
 
 ## Status — 2026-03-17
 
