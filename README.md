@@ -1,8 +1,8 @@
 # Thalamo-Cortical EM Manifold Model
 
-**Core question:** Can a Maxwell-equation treatment of the endogenous EM field of a parametric thalamic syncytium (HH cable neurons, Cx36 gap junction coupling, cortical column controllers) produce EM manifold dynamics that holographically encode 3D sensory inputs and reproduce LFP oscillatory signatures correlated with stimulus identity?
+**Core question:** Can a Maxwell-equation treatment of the endogenous ElectroMagnetic (EM) field of a parametric thalamic syncytium (Hodgkin-Huxley (HH) cable neurons, Connexin 36 (Cx36) gap junction coupling, cortical column controllers) produce EM manifold dynamics that holographically encode 3D sensory inputs and reproduce Local Field Potential (LFP) oscillatory signatures correlated with stimulus identity?
 
-The hypothesis: the thalamus operates as a folding electromagnetic manifold. Cortical columns drive it as computational controllers. The collective LFP of N gap-junction-coupled TRN cells produces spatial standing-wave modes (Lehar harmonic resonance) that encode a holographic model of the sensed world — recoverable with ≥70% fidelity after 20% cell loss.
+The hypothesis: the thalamus operates as a folding electromagnetic manifold. Cortical columns drive it as computational controllers. The collective LFP of N gap-junction-coupled thalamic reticular nucleus (TRN) cells produces spatial standing-wave modes (Steven Lehar's harmonic resonance) that encode a holographic model of the sensed world — recoverable with ≥70% fidelity after 20% cell loss.
 
 ---
 
