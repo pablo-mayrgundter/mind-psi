@@ -1,4 +1,4 @@
-# mind-psi
+# mind-gpd
 
 _Developing a physical [theory of thalamo-cortical function](https://sites.google.com/site/pablomayrgundter/mind) with [psi.inc's Get Physics Done AI assistant](https://github.com/psi-oss/get-physics-done)._
 
